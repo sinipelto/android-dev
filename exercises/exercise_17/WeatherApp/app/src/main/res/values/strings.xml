@@ -1,0 +1,21 @@
+<resources>
+    <string name="app_name">WeatherApp</string>
+
+    <string name="empty_value" />
+    <string name="null_value">NULL</string>
+
+
+    <string name="city_title">Syötä paikka:</string>
+    <string name="button_fetch">Hae</string>
+
+
+    <string name="result_title">Säätiedot:</string>
+
+    <string name="temp_header">"Aika:                   Lämpötila:\n\n"</string>
+
+    <string name="station_title">Lähin sääasema:</string>
+    <string name="region_title">Alue:</string>
+
+    <string name="error_failure">Säätietojen hakeminen epäonnistui!</string>
+    <string name="error_notfound">Hakusanalla ei löytynyt tuloksia!</string>
+</resources>

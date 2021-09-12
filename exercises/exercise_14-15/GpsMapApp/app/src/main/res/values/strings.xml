@@ -1,0 +1,22 @@
+<resources>
+    <string name="app_name">GpsMapApp</string>
+
+    <string name="location_title">Nykyinen sijaintisi:</string>
+    <string name="location_value_default">NULL</string>
+
+    <string name="save_button">Tallenna sijainti</string>
+    <string name="clear_button">Tyhjennä tallennetut</string>
+    <string name="saved_title">Sijainteja tallennettu:</string>
+    <string name="saved_count_default">NULL</string>
+    <string name="saved_count_unit">kpl</string>
+
+    <string name="permission_denied_text">Oikeuksia ei myönnetty. Myönnä ne asetuksista.</string>
+    <string name="settings_shortcut">Avaa asetukset</string>
+
+    <string name="location_unavailable">Sijainti ei ole juuri nyt saatavilla.</string>
+    <string name="location_pending">Sijaintia haetaan…</string>
+    <string name="location_update">Sijainti päivitetty.</string>
+
+    <string name="location_follow_on">Aloita seuranta</string>
+    <string name="location_follow_off">Pysäytä seuranta</string>
+</resources>

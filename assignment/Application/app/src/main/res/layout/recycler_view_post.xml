@@ -1,0 +1,142 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/postMainLayout"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical"
+    android:padding="8dp">
+
+  <LinearLayout
+      android:id="@+id/postRecyclerItem"
+      android:layout_width="match_parent"
+      android:layout_height="match_parent"
+      android:orientation="horizontal"
+      android:padding="8dp">
+
+    <ImageView
+        android:id="@+id/postRecyclerItemImage"
+        android:layout_width="80dp"
+        android:layout_height="80dp"
+        android:contentDescription="@string/remove_image_text"
+        tools:src="@tools:sample/avatars" />
+
+    <LinearLayout
+        android:id="@+id/postRecyclerItemTextLayout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:layout_weight="10"
+        android:orientation="vertical"
+        android:padding="5dp">
+
+      <TextView
+          android:id="@+id/postRecyclerItemText"
+          android:layout_width="match_parent"
+          android:layout_height="wrap_content"
+          tools:text="Lorem Ipsum Dolor Sit Amet Lorem Ipsum Dolor Sit Amet Lorem Ipsum Dolor Sit Amet Lorem Ipsum Dolor Sit " />
+
+      <LinearLayout
+          android:layout_width="match_parent"
+          android:layout_height="wrap_content"
+          android:orientation="horizontal">
+
+        <TextView
+            android:id="@+id/postPostedTitle"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginEnd="4dp"
+            android:text="@string/posted_title"
+            android:textStyle="bold" />
+
+        <TextView
+            android:id="@+id/postPostedValue"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/value_null" />
+
+      </LinearLayout>
+
+      <LinearLayout
+          android:layout_width="match_parent"
+          android:layout_height="match_parent"
+          android:orientation="horizontal">
+
+        <TextView
+            android:id="@+id/deleteButton"
+            android:layout_width="wrap_content"
+            android:layout_height="48dp"
+            android:layout_weight="1"
+            android:background="@drawable/border"
+            android:clickable="true"
+            android:focusable="true"
+            android:gravity="center"
+            android:text="@string/delete_button"
+            android:textColor="#FF0000"
+            android:textStyle="bold" />
+
+        <TextView
+            android:id="@+id/commentButton"
+            android:layout_width="wrap_content"
+            android:layout_height="48dp"
+            android:layout_weight="1"
+            android:background="@drawable/border"
+            android:clickable="true"
+            android:focusable="true"
+            android:gravity="center"
+            android:text="@string/comment_button"
+            android:textColor="#0000FF"
+            android:textStyle="bold" />
+
+      </LinearLayout>
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/postVoteLayout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_weight="26"
+        android:gravity="end"
+        android:orientation="vertical">
+
+      <Button
+          android:id="@+id/upvoteButton"
+          android:layout_width="40dp"
+          android:layout_height="40dp"
+          android:insetTop="0dp"
+          android:contentDescription="@string/post_downvote_button_desc"
+          android:insetBottom="0dp"
+          android:text="@string/value_plus"
+          android:textSize="20sp" />
+
+      <TextView
+          android:id="@+id/voteScoreText"
+          android:layout_width="40dp"
+          android:layout_height="wrap_content"
+          android:gravity="center"
+          android:text="@string/value_zero" />
+
+      <Button
+          android:id="@+id/downvoteButton"
+          android:layout_width="40dp"
+          android:layout_height="40dp"
+          android:insetTop="0dp"
+          android:insetBottom="0dp"
+          android:contentDescription="@string/post_downvote_desc"
+          android:text="@string/value_minus"
+          android:textSize="24sp"
+          app:iconPadding="0dp" />
+
+    </LinearLayout>
+
+  </LinearLayout>
+
+  <View
+      android:id="@+id/postSeparator"
+      android:layout_width="match_parent"
+      android:layout_height="1dp"
+      android:background="@android:color/darker_gray" />
+
+</LinearLayout>

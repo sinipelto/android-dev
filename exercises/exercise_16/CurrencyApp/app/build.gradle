@@ -1,0 +1,53 @@
+plugins {
+    id 'com.android.application'
+    id 'kotlin-android'
+}
+
+// Load personal secrets from specific file
+// Normally this file should be .gitignored.
+def apikeyPropertiesFile = rootProject.file("keys.properties")
+def apikeyProperties = new Properties()
+apikeyProperties.load(new FileInputStream(apikeyPropertiesFile))
+
+android {
+    compileSdkVersion 30
+    buildToolsVersion "30.0.3"
+
+    defaultConfig {
+        applicationId "fi.tuni.sinipelto.currencyapp"
+        minSdkVersion 30
+        targetSdkVersion 30
+        versionCode 1
+        versionName "1.0"
+        buildConfigField("String", "FIXER_APIKEY", apikeyProperties['FIXER_APIKEY'])
+    }
+
+    buildTypes {
+        release {
+            minifyEnabled false
+            proguardFiles getDefaultProguardFile('proguard-android-optimize.txt'), 'proguard-rules.pro'
+        }
+    }
+    compileOptions {
+        sourceCompatibility JavaVersion.VERSION_1_8
+        targetCompatibility JavaVersion.VERSION_1_8
+    }
+    kotlinOptions {
+        jvmTarget = '1.8'
+    }
+}
+
+dependencies {
+
+    implementation "org.jetbrains.kotlin:kotlin-stdlib:$kotlin_version"
+    implementation 'androidx.core:core-ktx:1.3.2'
+    implementation 'androidx.appcompat:appcompat:1.2.0'
+    implementation 'com.google.android.material:material:1.3.0'
+    implementation 'androidx.constraintlayout:constraintlayout:2.0.4'
+
+    // API calls
+    implementation 'com.squareup.retrofit2:retrofit:2.9.0'
+
+    // JSON <-> object transformation
+    implementation 'com.squareup.retrofit2:converter-gson:2.9.0'
+}

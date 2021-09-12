@@ -1,0 +1,10 @@
+<resources>
+    <string name="app_name">StepCounter</string>
+    <string name="app_title">Askelmittari</string>
+    <string name="counter_title">Askeleita:</string>
+    <string name="counter_null">NULL</string>
+    <string name="button_start">Aloita</string>
+    <string name="button_pause">Pysäytä</string>
+    <string name="button_save">Tallenna</string>
+    <string name="button_reset">Nollaa</string>
+</resources>

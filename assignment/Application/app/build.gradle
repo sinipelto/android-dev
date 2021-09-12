@@ -1,0 +1,111 @@
+plugins {
+    id 'com.android.application'
+    id 'kotlin-android'
+    id 'com.google.gms.google-services'
+    id 'com.google.android.libraries.mapsplatform.secrets-gradle-plugin'
+}
+
+android {
+    compileSdkVersion 30
+    buildToolsVersion "30.0.3"
+
+    defaultConfig {
+        applicationId "fi.tuni.sinipelto.disqs"
+        minSdkVersion 26
+        targetSdkVersion 30
+        versionCode 4
+        versionName "1.0.4"
+    }
+
+    buildTypes {
+        release {
+            minifyEnabled false
+            proguardFiles getDefaultProguardFile('proguard-android-optimize.txt'), 'proguard-rules.pro'
+        }
+    }
+    compileOptions {
+        sourceCompatibility JavaVersion.VERSION_1_8
+        targetCompatibility JavaVersion.VERSION_1_8
+    }
+    kotlinOptions {
+        jvmTarget = '1.8'
+    }
+    buildFeatures {
+        viewBinding true
+    }
+}
+
+dependencies {
+
+    // Import the Firebase BoM
+    implementation platform('com.google.firebase:firebase-bom:28.2.0')
+
+    // Add the dependency for the Firebase SDK for Google Analytics
+    // When using the BoM, don't specify versions in Firebase dependencies
+    implementation 'com.google.firebase:firebase-analytics-ktx'
+
+    // Add the dependencies for any other desired Firebase products
+    // https://firebase.google.com/docs/android/setup#available-libraries
+
+    // Declare the dependency for the Cloud Firestore library
+    // When using the BoM, you don't specify versions in Firebase library dependencies
+    implementation 'com.google.firebase:firebase-firestore-ktx'
+
+    // Declare the dependency for the Firebase Authentication library
+    // When using the BoM, you don't specify versions in Firebase library dependencies
+    implementation 'com.google.firebase:firebase-auth'
+
+    // Firebase Auth UI
+    implementation 'com.firebaseui:firebase-ui-auth:7.2.0'
+
+    // Declare the dependency for the Firebase Authentication library
+    // When using the BoM, you don't specify versions in Firebase library dependencies
+    implementation 'com.google.firebase:firebase-auth-ktx'
+
+    // Required only if Facebook login support is required
+    // Find the latest Facebook SDK releases here: https://goo.gl/Ce5L94
+    implementation 'com.facebook.android:facebook-android-sdk:11.1.1'
+
+    // ViewModel & LiveData
+    implementation 'androidx.lifecycle:lifecycle-livedata-ktx:2.3.1'
+    implementation 'androidx.lifecycle:lifecycle-viewmodel-ktx:2.3.1'
+
+    // Pull-to-refresh
+    implementation 'androidx.swiperefreshlayout:swiperefreshlayout:1.1.0'
+
+    // Parse JSON
+    implementation 'com.google.code.gson:gson:2.8.7'
+
+    // CameraX core library using camera2 implementation
+    implementation 'androidx.camera:camera-camera2:1.0.1'
+    // CameraX Lifecycle Library
+    implementation 'androidx.camera:camera-lifecycle:1.0.1'
+    // CameraX View class
+    implementation 'androidx.camera:camera-view:1.0.0-alpha27'
+
+    // KotlinX Coroutines
+    implementation 'org.jetbrains.kotlinx:kotlinx-coroutines-core:1.5.1'
+    implementation 'org.jetbrains.kotlinx:kotlinx-coroutines-android:1.5.1'
+    implementation 'org.jetbrains.kotlinx:kotlinx-coroutines-play-services:1.4.1'
+
+    // Location services
+    implementation 'com.google.android.gms:play-services-location:18.0.0'
+
+    // Google Maps
+    implementation 'com.google.android.gms:play-services-maps:17.0.1'
+
+    // Places SDK
+    implementation 'com.google.android.libraries.places:places:2.4.0'
+
+    // Volley, required by Places SDK
+    implementation 'com.android.volley:volley:1.2.0'
+
+    // Basic Android libs
+    implementation 'androidx.core:core-ktx:1.6.0'
+    implementation 'androidx.appcompat:appcompat:1.3.1'
+    implementation 'com.google.android.material:material:1.4.0'
+    implementation 'androidx.constraintlayout:constraintlayout:2.1.0'
+
+    // Kotlin standard library
+    implementation "org.jetbrains.kotlin:kotlin-stdlib:1.5.21"
+}

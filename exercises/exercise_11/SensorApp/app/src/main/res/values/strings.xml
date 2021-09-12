@@ -1,0 +1,10 @@
+<resources>
+    <string name="app_name">SensorApp</string>
+    <string name="sensor_data_title">Sensoridataa:</string>
+    <string name="sensor_value_null">NULL</string>
+    <string name="sensor_value_error">ERROR</string>
+    <string name="light_sensor_title">LightSensor:</string>
+    <string name="orientation_sensor_tilte">Orientation:</string>
+    <string name="pause_button_pause">Pause</string>
+    <string name="pause_button_resume">Resume</string>
+</resources>

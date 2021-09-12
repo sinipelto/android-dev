@@ -1,0 +1,56 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="new_invoice">Lisää uusi lasku:</string>
+    <string name="button_add">Lisää</string>
+    <string name="button_back">Peruuta</string>
+    <string name="invoice_payee">Laskun saaja:</string>
+    <string name="invoice_type">Laskun tyyppi:</string>
+    <string name="invoice_amount">Määrä:</string>
+    <string name="invoice_due">Eräpäivä:</string>
+    <string name="invoice_type_default">Valitse laskun tyyppi…</string>
+    <string name="currency_eur">EUR</string>
+    <string name="empty_count">0</string>
+
+    <string name="invoicetype_other">Muu lasku</string>
+    <string name="invoicetype_travel">Matkalasku</string>
+    <string name="invoicetype_maintenance">Huoltolasku</string>
+    <string name="invoicetype_electricity">Sähkölasku</string>
+    <string name="invoicetype_credit">Luottolasku</string>
+    <string name="invoicetype_creditcard">Luottokorttilasku</string>
+    <string name="invoicetype_water">Vesilasku</string>
+    <string name="invoicetype_rent">Vuokralasku</string>
+    <string name="invoicetype_ecommerce">Verkkokauppalasku</string>
+    <string name="invoicetype_phone">Puhelinlasku</string>
+    <string name="invoicetype_loan">Lainalasku</string>
+
+    <string name="empty_field">Kenttä ei voi olla tyhjä</string>
+    <string name="insert_error">Laskun luonnissa tapahtui virhe</string>
+    <string name="insert_success">Uusi lasku lisätty onnistuneesti</string>
+    <string name="remove_error">Laskun poisto epäonnistui</string>
+    <string name="remove_success">Lasku poistettu onnistuneesti</string>
+
+    <string name="logout_success">Uloskirjautuminen onnistui</string>
+    <string name="login_failed">Kirjautuminen epäonnistui</string>
+    <string name="logout_failed">Uloskirjautuminen epäonnistui</string>
+
+    <string name="dialog_title">Poista lasku</string>
+    <string name="dialog_msg">Haluatko varmasti poistaa laskun?</string>
+    <string name="dialog_yes">Kyllä</string>
+    <string name="dialog_no">En</string>
+    <string name="invoices_total">Laskuja yhteensä:</string>
+    <string name="invoices_due">Laskuja erääntynyt:</string>
+    <string name="summary_text">Yhteenveto:</string>
+    <string name="sum_total">Summa yhteensä:</string>
+    <string name="empty_info">Ei vielä yhtään laskua lisätty.\n\nLisää lasku käyttäen alakulman painiketta.</string>
+
+    <string name="logout_item_text">Kirjaudu ulos</string>
+
+    <string name="descripiton_recyclerview">Lista hallittavista laskuistasi</string>
+    <string name="description_amountedit">Syötä tähän laskun kokonaissumma</string>
+    <string name="descrption_invoicepayee">Syötä tähän laskun saajan nimi</string>
+    <string name="descrption_invoicetype">Syötä tähän laskun tyyppi</string>
+    <string name="description_duedate">Syötä tähän laskun eräpäivä</string>
+    <string name="description_addbutton">Lisää uusi lasku listalle tästä</string>
+    <string name="description_scrollview">Selattava näkymä laskun lisäyslomakkeelle</string>
+    <string name="invoicetype_car">Autolasku</string>
+</resources>

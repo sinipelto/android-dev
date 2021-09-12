@@ -1,0 +1,13 @@
+<resources>
+    <string name="app_name">Kalkulaattori 2.0</string>
+    <string name="eqSignText">=</string>
+    <string name="plusSignText">+</string>
+    <string name="minusSignText">-</string>
+    <string name="multiSignText">x</string>
+    <string name="divSignText">/</string>
+    <string name="resultText">0</string>
+    <string name="calcBtnText">Laske</string>
+    <string name="historyButtonText">Historia</string>
+    <string name="backButtonText">Takaisin</string>
+    <string name="clearButtonText">Tyhjennä</string>
+</resources>

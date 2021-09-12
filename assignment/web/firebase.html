@@ -1,0 +1,240 @@
+<!DOCTYPE html>
+<html lang="en" class="no-js">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  <title>Firestore Manager v1.0</title>
+
+  <script type="module">
+    document.documentElement.classList.remove('no-js');
+    document.documentElement.classList.add('js');
+  </script>
+
+  <style>
+	.container {
+		height: 200px;
+		position: relative;
+		border: 3px solid green;
+	}
+
+	.vertical-center {
+		margin: 0;
+		position: absolute;
+		top: 50%;
+		-ms-transform: translateY(-50%);
+		transform: translateY(-50%);
+	}
+
+	.center {
+		margin: auto;
+		width: 50%;
+		border: 3px solid green;
+		padding: 10px;
+	}
+  </style>
+
+  <meta name="description" content="Firebase Firestore Database Data Manager">
+  <meta property="og:title" content="Firestore Manager - v1.0">
+  <meta property="og:description" content="Web Manager Tool for Firestore database">
+  <meta property="og:image:alt" content="Image description">
+  <meta property="og:locale" content="en_GB">
+  <meta property="og:type" content="website">
+  <meta name="twitter:card" content="summary_large_image">
+
+  <meta name="theme-color" content="#FF00FF">
+
+</head>
+
+<body>
+
+  <!-- Content -->
+
+	<div class="center">
+		<p>Collection 1:</p>
+		<input id="coll_1" type="text">
+		<br />
+		<p>ID 1:</p>
+		<input id="d1" type="text">
+		<br />
+		<p>Collection 2:</p>
+		<input id="coll_2" type="text">
+		<br />
+		<p>ID 2:</p>
+		<input id="d2" type="text">
+		<br />
+		<p>Collection 3:</p>
+		<input id="coll_3" type="text">
+		<p>Filter field (e.g. A ==/&lt=/!=/&gt= B):</p>
+		<textarea id="tarea"></textarea>
+		<br />
+		<br />
+		<label for="type">Filter field type:</label>
+		<select id="type">
+			<option value="str">String</option>
+			<option value="num">Number</option>
+			<option value="bool">Boolean</option>
+			<option value="time">Timestamp</option>
+			<option value="geopnt">GeoPoint</option>
+			<option value="nul">Null</option>
+		</select>
+		<br />
+		<br />
+		<button id="btn">Run Delete</button>
+		<button id="resetBtn" onClick="window.location.href = window.location.href;">Reset</button>
+		<br />
+		<p id="result"></p>
+	</div>
+
+  <!-- Content end -->
+
+  <script
+    src="https://code.jquery.com/jquery-3.6.0.slim.min.js"
+    integrity="sha256-u7e5khyithlIdTpu22PHhENmPcRdFiHRjhAuHcs05RI="
+    crossorigin="anonymous"></script>
+
+  <script src="https://www.gstatic.com/firebasejs/8.8.0/firebase-app.js"></script>
+  <script src="https://www.gstatic.com/firebasejs/8.8.0/firebase-firestore.js"></script>
+
+  <script>
+	//const firebase = require("firebase");
+	// Required for side-effects
+	//require("firebase/firestore");
+
+	firebase.initializeApp({
+		apiKey: 'REPLACE_ME',
+		projectId: 'disqs-2021'
+	});
+
+	const db = firebase.firestore();
+		
+	const result = $("#result");
+	const tarea = $("#tarea");
+
+	var runOnce = false;
+	var asked = false;
+
+	$("#btn").on("click", () => {
+		runOnce = true;
+
+		result.text("");
+
+		const c1 = $("#coll_1").val();
+		const c2 = $("#coll_2").val();
+		const c3 = $("#coll_3").val();
+
+		const d1 = $("#d1").val();
+		const d2 = $("#d2").val();
+
+		var ok = false;
+		var coll;
+		
+		if (c3 && d2 && c2 && d1 && c1) {
+			coll = db
+					.collection(c1)
+					.doc(d1)
+					.collection(c2)
+					.doc(d2)
+					.collection(c3);
+		} else if (c3 && d2 && c2 && d1) {
+			result.text("ERROR: Collection 1 must be filled!");
+		} else if (c3 && d2 && c2) {
+			result.text("ERROR: Collection 1 ID, Collection 1 must be filled!");
+		} else if (c3 && d2) {
+			result.text("ERROR: Collection 2, Collection 1 ID, Collection 1 must be filled!");
+		} else if (c3) {
+			result.text("ERROR: Collection 2 ID , Collection 2, Collection 1 ID, Collection 1 must be filled!");
+		} else if (c2 && d1 && c1) {
+			coll = db
+				.collection(c1)
+				.doc(d1)
+				.collection(c2);
+		} else if (c2 && d1) {
+			result.text("ERROR: Collection 1 ID, Collection 1 must be filled!");
+		} else if (c2) {
+			result.text("ERROR: Collection 2 ID, Collection 1 ID, Collection 1 must be filled!");
+		} else if (c1) {
+			coll = db.collection(c1);
+		} else {
+			result.text("ERROR: at least Collection 1 must be filled!");
+			return;
+		}
+
+		console.log("Collection:", coll);
+		
+		const query = tarea.val()
+		
+		if (query) {
+			console.log("QUERY: ", query);
+			
+			var parts = [];
+			
+			var c = 0;
+			while (parts.length != 3) {
+				if (c == 0) {
+					parts = query.split("==");
+					parts.push("==");
+				}
+				else if (c == 1) {
+					parts = query.split("<=");
+					parts.push("<=");
+				}
+				else if (c == 2) {
+					parts = query.split(">=");
+					parts.push(">=");
+				} else {
+					result.text("ERROR: Query was invalid (should be 'A [==/<=/>=] B'!");
+					console.error("Equality not specified!");
+					throw new Exception("Equality mark was not specified");
+				}
+				
+				c++;
+			}
+			
+			// Trim whitespaces out of the query parts
+			for (var i = 0; i < parts.length; i++) {
+				parts[i] = parts[i].trim();
+			}
+
+			// Determine the type of the filtered field value
+			const type = $("#type option:checked");
+			
+			switch (type.val()) {
+				case "str":
+					parts[1] = parts[1].toString();
+					break;
+				case "num":
+					parts[1] = Number(parts[1]);
+					break;
+				case "bool":
+					parts[1] = Boolean(parts[1]);
+					break;
+				case "geoPoint":
+					var lnglat = parts[1].split(";");
+					parts[1] = new GeoPoint(lnglat[0], lnglat[1]);
+					break;
+			}
+			
+			// Add the filter query
+			coll = coll.where(parts[0], parts[2], parts[1]);
+
+		} else {
+			console.log("No query detected. Deleting all elements in (sub)collection..");
+		}
+		
+		if (asked) {
+			coll.get().then( snaps => snaps.forEach( s => s.ref.delete().then((delResp) => console.log("Delete OK:", delResp)) ) ).then(resp => {
+				result.text("DONE. RESULT: " + JSON.stringify(resp));
+			});
+			asked = false;
+		} else {
+			console.log("Not asked. Confirmation requested.");
+			result.text("Are you sure??");
+			if (!query) result.text(result.text() + " (NOTE: WHOLE COLLECTION IS DELETED)");
+			result.text(result.text() + " (click run again to commit)");
+			asked = true;
+		}
+	});
+  </script>
+</body>
+</html>

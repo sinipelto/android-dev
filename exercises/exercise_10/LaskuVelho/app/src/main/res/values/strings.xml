@@ -1,0 +1,66 @@
+<resources>
+    <!-- Facebook application ID and custom URL scheme (app ID prefixed by 'fb'). -->
+    <string name="facebook_app_id" translatable="false">440908573804305</string>
+    <string name="facebook_application_id" translatable="false">440908573804305</string>
+    <string name="fb_login_protocol_scheme" translatable="false">fb440908573804305</string>
+
+    <!-- Twitter consumer key and secret -->
+    <string name="twitter_consumer_key" translatable="false">c7AA2KKBPVr4eKMHtuWbg65ZT</string>
+    <string name="twitter_consumer_secret" translatable="false">8OWJPnnH6Hys1WXNEx1PAwZpZEc843y41k2mTnATztsdMqE6Ax</string>
+
+    <string name="app_name" translatable="false">LaskuVelho</string>
+
+    <string name="new_invoice">Add new invoice:</string>
+    <string name="button_add">Add</string>
+    <string name="button_back">Cancel</string>
+    <string name="invoice_payee">Invoice Payee:</string>
+    <string name="invoice_type">Invoice Type:</string>
+    <string name="invoice_amount">Amount:</string>
+    <string name="invoice_due">Due Date:</string>
+    <string name="invoice_type_default">Choose invoice type…</string>
+    <string name="currency_eur">EUR</string>
+    <string name="empty_count">0</string>
+
+    <string name="invoicetype_other">Other invoice</string>
+    <string name="invoicetype_travel">Travel invoice</string>
+    <string name="invoicetype_maintenance">Maintenance invoice</string>
+    <string name="invoicetype_electricity">Electricity invoice</string>
+    <string name="invoicetype_credit">Credit invoice</string>
+    <string name="invoicetype_creditcard">Credit card invoice</string>
+    <string name="invoicetype_water">Water invoice</string>
+    <string name="invoicetype_rent">Rent invoice</string>
+    <string name="invoicetype_ecommerce">E-Commerce invoice</string>
+    <string name="invoicetype_phone">Phone invoice</string>
+    <string name="invoicetype_loan">Loan invoice</string>
+    <string name="invoicetype_car">Car invoice</string>
+
+    <string name="empty_field">This field cannot be empty</string>
+    <string name="insert_error">Invoice creation failed</string>
+    <string name="insert_success">New invoice added successfully</string>
+    <string name="remove_error">Invoice deletion failed</string>
+    <string name="remove_success">Invoice deleted successfully</string>
+
+    <string name="logout_success">Successfully logged out</string>
+    <string name="logout_failed">Log out failed</string>
+    <string name="login_failed">Log in failed</string>
+
+    <string name="dialog_title">Remove invoice</string>
+    <string name="dialog_msg">Are you sure you want to remove this invoice?</string>
+    <string name="dialog_yes">Yes</string>
+    <string name="dialog_no">Cancel</string>
+    <string name="invoices_total">Invoice count:</string>
+    <string name="invoices_due">Invoices due:</string>
+    <string name="summary_text">Summary:</string>
+    <string name="sum_total">Invoices total:</string>
+    <string name="empty_info">No invoices added yet.\n\nAdd a new invoice using the add button in the bottom left corner.</string>
+
+    <string name="logout_item_text">Log out</string>
+
+    <string name="descripiton_recyclerview">List of your invoices to manage</string>
+    <string name="description_amountedit">Enter the invoice amount or value</string>
+    <string name="descrption_invoicepayee">Enter the receiver party name for this invoice</string>
+    <string name="descrption_invoicetype">Enter the type of the invoice, e.g. phone bill</string>
+    <string name="description_duedate">Enter the invoice due date using the date picker</string>
+    <string name="description_addbutton">Add a new invoice to the list</string>
+    <string name="description_scrollview">Contains elements for inserting a new invoice to the application</string>
+</resources>

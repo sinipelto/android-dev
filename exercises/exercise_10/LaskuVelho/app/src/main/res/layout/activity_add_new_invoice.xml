@@ -1,0 +1,152 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".ui.activity.NewInvoiceActivity">
+
+    <TextView
+        android:id="@+id/titleTextView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="16dp"
+        android:text="@string/new_invoice"
+        android:textSize="24sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <ScrollView
+        android:id="@+id/addInvoiceScrollView"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_marginTop="64dp"
+        android:contentDescription="@string/description_scrollview"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/titleTextView">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <TextView
+                android:id="@+id/payeeTextView"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:labelFor="@id/payeeEditText"
+                android:text="@string/invoice_payee" />
+
+            <EditText
+                android:id="@+id/payeeEditText"
+                android:layout_width="match_parent"
+                android:layout_height="48dp"
+                android:layout_gravity="center"
+                android:layout_marginTop="8dp"
+                android:layout_marginStart="32dp"
+                android:layout_marginEnd="32dp"
+                android:autofillHints=""
+                android:contentDescription="@string/descrption_invoicepayee"
+                android:ems="10"
+                android:inputType="textPersonName" />
+
+            <TextView
+                android:id="@+id/invoiceTypeTextView"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:layout_marginTop="32dp"
+                android:labelFor="@id/invoiceTypeSpinner"
+                android:text="@string/invoice_type" />
+
+            <Spinner
+                android:id="@+id/invoiceTypeSpinner"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:layout_marginTop="8dp"
+                android:contentDescription="@string/descrption_invoicetype"
+                android:spinnerMode="dropdown" />
+
+            <TextView
+                android:id="@+id/amountTextView"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:layout_marginTop="32dp"
+                android:labelFor="@id/amountEditText"
+                android:text="@string/invoice_amount" />
+
+            <TableRow
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_marginTop="8dp"
+                android:layout_marginStart="72dp"
+                android:layout_marginEnd="72dp">
+
+                <EditText
+                    android:id="@+id/amountEditText"
+                    android:layout_width="128dp"
+                    android:layout_height="48dp"
+                    android:layout_marginStart="32dp"
+                    android:contentDescription="@string/description_amountedit"
+                    android:ems="10"
+                    android:importantForAutofill="no"
+                    android:inputType="numberDecimal" />
+
+                <TextView
+                    android:id="@+id/currencyTextView"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="16dp"
+                    android:layout_marginEnd="16dp"
+                    android:text="@string/currency_eur"
+                    android:textSize="24sp" />
+
+            </TableRow>
+
+            <TextView
+                android:id="@+id/dueTextView"
+                android:layout_gravity="center"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="32dp"
+                android:labelFor="@id/dueDatePicker"
+                android:text="@string/invoice_due" />
+
+            <DatePicker
+                android:id="@+id/dueDatePicker"
+                android:layout_gravity="center"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="32dp"
+                android:layout_marginBottom="32dp"
+                android:calendarViewShown="false"
+                android:contentDescription="@string/description_duedate"
+                android:datePickerMode="spinner" />
+
+            <Button
+                android:id="@+id/addBtn"
+                android:layout_gravity="center"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="32dp"
+                android:contentDescription="@string/description_addbutton"
+                android:onClick="backButtonHandle"
+                android:text="@string/button_add" />
+
+            <Button
+                android:id="@+id/backBtn"
+                android:layout_gravity="center"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="32dp"
+                android:onClick="backButtonHandle"
+                android:text="@string/button_back" />
+        </LinearLayout>
+    </ScrollView>
+
+</androidx.constraintlayout.widget.ConstraintLayout>

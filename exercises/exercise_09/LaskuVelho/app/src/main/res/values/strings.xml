@@ -1,0 +1,29 @@
+<resources>
+    <string name="app_name">LaskuVelho</string>
+    <string name="new_invoice">Lisää uusi lasku:</string>
+    <string name="button_add">Lisää</string>
+    <string name="button_back">Peruuta</string>
+    <string name="invoice_payee">Laskun saaja:</string>
+    <string name="invoice_type">Laskun tyyppi:</string>
+    <string name="invoice_amount">Määrä:</string>
+    <string name="invoice_due">Eräpäivä:</string>
+    <string name="invoice_type_default">Valitse laskun tyyppi…</string>
+    <string name="currency_eur">EUR</string>
+    <string name="empty_count">0</string>
+
+    <string name="empty_field">Kenttä ei voi olla tyhjä</string>
+    <string name="insert_error">Laskun luonnissa tapahtui virhe</string>
+    <string name="insert_success">Uusi lasku lisätty onnistuneesti</string>
+    <string name="remove_error">Laskun poisto epäonnistui</string>
+    <string name="remove_success">Lasku poistettu onnistuneesti</string>
+
+    <string name="dialog_title">Poista lasku</string>
+    <string name="dialog_msg">Haluatko varmasti poistaa laskun?</string>
+    <string name="dialog_yes">Kyllä</string>
+    <string name="dialog_no">En</string>
+    <string name="invoices_total">Laskuja yhteensä:</string>
+    <string name="invoices_due">Laskuja erääntynyt:</string>
+    <string name="summary_text">Yhteenveto:</string>
+    <string name="sum_total">Summa yhteensä:</string>
+    <string name="empty_info">Ei vielä yhtään laskua lisätty.\n\nLisää lasku käyttäen alakulman painiketta.</string>
+</resources>

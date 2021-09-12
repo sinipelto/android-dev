@@ -1,0 +1,65 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <!-- Facebook application ID and custom URL scheme (app ID prefixed by 'fb'). -->
+    <string name="facebook_application_id" translatable="false">355314576085115</string>
+    <string name="facebook_login_protocol_scheme" translatable="false">fb355314576085115</string>
+
+    <string name="facebook_app_id" translatable="false">355314576085115</string>
+    <string name="fb_login_protocol_scheme" translatable="false">fb355314576085115</string>
+
+    <string name="auth_error_text">Authentication failed! Please try again..</string>
+    <string name="auth_cancel_text">Authentication process was interrupted! If the issue persists, try with another login provider.</string>
+    <string name="app_name">Disqs</string>
+    <string name="comment_title">Comments</string>
+    <string name="tab_text_1">World</string>
+    <string name="tab_text_2">Own Posts</string>
+    <string name="tab_text_3">Map</string>
+    <string name="no_own_posts_text">You have no own posts yet.<br />\n Go to the WORLD tab and give it a go!</string>
+    <string name="remove_image_text">Remove image</string>
+    <string name="posts_refresh_failed">Failed to refresh posts!</string>
+    <string name="comments_refresh_failed">Failed to refresh comments!</string>
+    <string name="create_post_failed">Failed to create new post! Please contact the app supoprt!</string>
+    <string name="create_comment_failed">Failed to add new comment! Was the post removed?</string>
+    <string name="image_capture_failed">Image capture failed! Please contact app support!</string>
+    <string name="no_comments_text">No comments yet.</string>
+    <string name="post_not_available">This Post is no longer available, sorry!</string>
+    <string name="add_post_placeholder">Write something…</string>
+    <string name="add_comment_placeholder">Comment something…</string>
+    <string name="posted_title">Posted:</string>
+    <string name="value_null" translatable="false">NULL</string>
+    <string name="value_zero" translatable="false">0</string>
+    <string name="value_plus" translatable="false">+</string>
+    <string name="value_minus" translatable="false">-</string>
+    <string name="delete_button">Delete</string>
+    <string name="comment_button">Comment</string>
+    <string name="no_camera_perms">Camera permission was not granted!</string>
+    <string name="camera_perms_denied">Camera Permissions were denied! Please allow them in the app settings.</string>
+    <string name="retry_photo_text">Retake</string>
+    <string name="back_button_text">Back</string>
+    <string name="take_photo_text">Take Photo</string>
+    <string name="flip_camera_text">Flip</string>
+    <string name="accept_photo_text">Use This</string>
+    <string name="empty_text_input_error">Cannot send empty text! Please write something..</string>
+    <string name="settings_button">Open Settings</string>
+    <string name="no_world_posts_text">No posts made yet.<br /> Go ahead and type in the first one below!</string>
+    <string name="photo_fragment_imageview_description">Fullscreen image of the Post</string>
+    <string name="text_too_long">The text is too long (max. 512 letters)</string>
+    <string name="photo_attach_success">Photo attached to post!</string>
+    <string name="add_vote_failed">Failed to add vote! Please contact support if the issue persists.</string>
+    <string name="logout_button_text">Log out</string>
+    <string name="sync_button_text">Log in to sync</string>
+    <string name="posts_load_text">Loading posts…</string>
+    <string name="users_marker_title">Users on this area:</string>
+    <string name="location_perms_denied">Location Permissions were denied! Please allow them in the app settings.</string>
+    <string name="view_pager_description">Container for application view content.</string>
+    <string name="comment_recycler_view_desc">All the post comments are listed in this view.</string>
+    <string name="own_post_recycler_view_desc">User own posts are llisted in this view.</string>
+    <string name="post_recycler_view_desc">All users posts are listed in this view.</string>
+    <string name="attach_button_desc">A fresh photo can be added to the post using camera by pressing this button.</string>
+    <string name="add_post_edit_desc">Text for the new post should be written in this field.</string>
+    <string name="comment_back_button_desc">User can return back to the previous view by clicking this button.</string>
+    <string name="add_comment_button_desc">New comment can be added by clicking this button.</string>
+    <string name="post_downvote_desc">The post can be given a negative vote by clicking on this button.</string>
+    <string name="post_downvote_button_desc">The post can be given a positive vote by clicking on this button.</string>
+    <string name="mock_gps_error_text">Location Mocking detected! Please turn GPS mocking off before using the map view.</string>
+</resources>
